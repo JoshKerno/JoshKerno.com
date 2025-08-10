@@ -323,7 +323,8 @@ document.addEventListener('DOMContentLoaded', function() {
         images.forEach(img => imageObserver.observe(img));
     }
 
-    // Smooth scrolling for anchor links
+    // Smooth scrolling for anchor links - TEMPORARILY DISABLED FOR DEBUGGING
+    /*
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         anchor.addEventListener('click', function (e) {
             e.preventDefault();
@@ -336,6 +337,7 @@ document.addEventListener('DOMContentLoaded', function() {
             }
         });
     });
+    */
 
     // Keyboard navigation for slideshow
     const slideshow = document.querySelector('.slideshow-container');
