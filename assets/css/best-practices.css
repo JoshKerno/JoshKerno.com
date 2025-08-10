@@ -1,0 +1,334 @@
+/* Best Practices & Modern Web Standards */
+
+/* Performance optimizations */
+* {
+  box-sizing: border-box;
+}
+
+/* Reduce paint operations */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Optimize animations for users who prefer reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* Focus styles for accessibility */
+*:focus {
+  outline: 2px solid #4acaa8;
+  outline-offset: 2px;
+}
+
+/* Skip link for accessibility */
+.skip-link {
+  position: absolute;
+  top: -40px;
+  left: 6px;
+  background: #4acaa8;
+  color: white;
+  padding: 8px;
+  text-decoration: none;
+  z-index: 10000;
+}
+
+.skip-link:focus {
+  top: 6px;
+}
+
+/* Form error states */
+input.error,
+textarea.error {
+  border-color: #ff6b6b !important;
+  box-shadow: 0 0 0 2px rgba(255, 107, 107, 0.2);
+}
+
+/* Loading states for lazy images */
+.lazy {
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+
+.lazy.loaded {
+  opacity: 1;
+}
+
+/* High contrast mode support */
+@media (prefers-contrast: high) {
+  body {
+    background: #000;
+    color: #fff;
+  }
+  
+  a {
+    color: #4acaa8;
+    text-decoration: underline;
+  }
+}
+
+/* Dark mode support */
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg-color: #1a1a1a;
+    --text-color: #ffffff;
+    --accent-color: #4acaa8;
+  }
+}
+
+/* Print styles */
+@media print {
+  .nav,
+  .actions,
+  .icons {
+    display: none !important;
+  }
+  
+  body {
+    background: white !important;
+    color: black !important;
+  }
+  
+  a {
+    color: black !important;
+    text-decoration: underline !important;
+  }
+}
+
+/* Enhanced slideshow accessibility */
+.slideshow-container {
+  position: relative;
+}
+
+.slide {
+  display: none;
+  opacity: 0;
+  transition: opacity 0.5s ease-in-out;
+}
+
+.slide.active {
+  display: block;
+  opacity: 1;
+}
+
+.slide img {
+  width: 100%;
+  height: auto;
+  max-width: 100%;
+  display: block;
+}
+
+.slide-dots {
+  text-align: center;
+  margin-top: 1rem;
+}
+
+/* Enhanced dot styling for accessibility */
+.dot {
+  cursor: pointer;
+  transition: background-color 0.6s ease;
+}
+
+.dot.active, .dot:hover {
+  background-color: rgba(255, 255, 255, 0.9);
+}
+
+/* Keyboard navigation support */
+.dot:focus {
+  outline: 2px solid #4acaa8;
+  outline-offset: 2px;
+}
+
+/* Screen reader only text */
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+/* Performance optimizations for images */
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Responsive typography */
+@media (max-width: 768px) {
+  html {
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 480px) {
+  html {
+    font-size: 12px;
+  }
+}
+
+/* Loading indicator */
+.loading {
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  border: 3px solid rgba(255, 255, 255, 0.3);
+  border-radius: 50%;
+  border-top-color: #4acaa8;
+  animation: spin 1s ease-in-out infinite;
+}
+
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}
+
+/* Error message styling */
+.error-message {
+  color: #ff6b6b;
+  font-size: 0.875rem;
+  margin-top: 0.25rem;
+}
+
+/* Success message styling */
+.success-message {
+  color: #4acaa8;
+  font-size: 0.875rem;
+  margin-top: 0.25rem;
+}
+
+/* Focus visible for better accessibility */
+.focus-visible {
+  outline: 2px solid #4acaa8;
+  outline-offset: 2px;
+}
+
+/* Reduced motion support */
+@media (prefers-reduced-motion: reduce) {
+  .loading {
+    animation: none;
+  }
+  
+  .slide {
+    transition: none;
+  }
+} 
+
+/* Enhanced spacing and padding */
+.what-i-do {
+  padding: 2rem 0;
+  margin: 1.5rem 0;
+}
+
+.background-story {
+  padding: 2rem 0;
+  margin: 1.5rem 0;
+}
+
+.what-i-do header,
+.background-story header {
+  margin-bottom: 1.5rem;
+}
+
+.what-i-do .row {
+  margin-bottom: 1.5rem;
+}
+
+.service-box {
+  padding: 1.5rem;
+  margin-bottom: 1rem;
+  border-radius: 8px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.service-box:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+}
+
+.service-box h3 {
+  margin: 1rem 0 0.5rem 0;
+}
+
+.service-box p {
+  margin: 0.5rem 0;
+  line-height: 1.6;
+}
+
+.service-box .image {
+  margin-bottom: 1rem;
+}
+
+/* Improved section spacing */
+.post.featured {
+  padding: 1.5rem 0;
+}
+
+.post.featured section {
+  margin: 2rem 0;
+}
+
+.post.featured .actions.special {
+  margin: 1.5rem 0;
+  padding: 0.75rem 0;
+}
+
+/* Enhanced slideshow spacing */
+.slideshow-container {
+  margin: 2rem 0;
+}
+
+.slide-dots {
+  margin-top: 1.5rem;
+  padding: 0.5rem 0;
+}
+
+/* Improved text spacing */
+.background-story p {
+  line-height: 1.8;
+  margin: 1.5rem 0;
+}
+
+/* Enhanced button spacing */
+.actions.special li {
+  margin: 0.5rem;
+}
+
+/* Fix button styling to prevent distortion */
+.actions.special .button {
+  margin: 0.25rem;
+}
+
+.actions.special .button.large {
+  padding: 0.75rem 1.5rem;
+  font-size: 1rem;
+  min-width: auto;
+  height: auto;
+}
+
+/* Responsive padding adjustments */
+@media screen and (max-width: 736px) {
+  .what-i-do,
+  .background-story {
+    padding: 2rem 0;
+    margin: 1rem 0;
+  }
+  
+  .service-box {
+    padding: 1rem;
+  }
+  
+  .post.featured section {
+    margin: 2rem 0;
+  }
+} 
