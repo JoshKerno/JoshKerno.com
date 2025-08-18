@@ -12,6 +12,24 @@
   box-sizing: border-box;
 }
 
+/* Force body background image for production */
+body.is-preload {
+  background-image: url("/images/overlay.png"), linear-gradient(0deg, rgba(0,0,0,0.1), rgba(0,0,0,0.1)), url("/images/bg.jpg") !important;
+  background-size: auto, auto, cover !important;
+  background-position: center, center, center !important;
+  background-repeat: repeat, no-repeat, no-repeat !important;
+  background-attachment: fixed, fixed, fixed !important;
+}
+
+/* Override any conflicting body background rules */
+html body.is-preload {
+  background-image: url("/images/overlay.png"), linear-gradient(0deg, rgba(0,0,0,0.1), rgba(0,0,0,0.1)), url("/images/bg.jpg") !important;
+  background-size: auto, auto, cover !important;
+  background-position: center, center, center !important;
+  background-repeat: repeat, no-repeat, no-repeat !important;
+  background-attachment: fixed, fixed, fixed !important;
+}
+
 
 
 /* Reduce paint operations */
@@ -206,11 +224,11 @@ input, select, textarea {
 
 	body {
 		background-color: #1e252d;
-		background-image: url("/images/overlay.png"), linear-gradient(0deg, rgba(0,0,0,0.1), rgba(0,0,0,0.1)), url("/images/bg.jpg");
+		/* background-image: url("/images/overlay.png"), linear-gradient(0deg, rgba(0,0,0,0.1), rgba(0,0,0,0.1)), url("/images/bg.jpg");
 		background-size: auto, auto, cover;
 		background-position: center, center, center;
 		background-repeat: repeat, no-repeat, no-repeat;
-		background-attachment: fixed, fixed, fixed;
+		background-attachment: fixed, fixed, fixed; */
 	}
 
 		body.is-preload *, body.is-preload *:before, body.is-preload *:after {
