@@ -19,8 +19,22 @@ const urlsToCache = [
   '/images/pic01.jpg',
   '/images/pic02.jpg',
   '/images/pic03.jpg',
-
-
+  '/images/bg.jpg',
+  '/images/overlay.png',
+  '/images/pic04.jpg',
+  '/images/pic05.jpg',
+  '/images/pic06.jpg',
+  '/images/pic07.jpg',
+  '/images/pic08.jpg',
+  '/images/pic09.jpg',
+  '/images/godrevy.jpg',
+  '/images/surf.jpg',
+  '/images/gf.jpg',
+  '/images/productconf.jpg',
+  '/images/codeexample.jpg',
+  '/images/klayvioflow.jpg',
+  '/images/webman.jpg',
+  '/favicon.ico'
 ];
 
 // Install event - cache resources
