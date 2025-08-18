@@ -19,9 +19,8 @@ const urlsToCache = [
   '/images/pic01.jpg',
   '/images/pic02.jpg',
   '/images/pic03.jpg',
-  '/images/me.jpg',
-  '/images/tr.jpg',
-  '/images/gf.jpg'
+
+
 ];
 
 // Install event - cache resources
