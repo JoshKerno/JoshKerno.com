@@ -121,7 +121,7 @@
 		$('.scrolly').scrolly();
 
 	// Background.
-		$wrapper._parallax(0.925);
+		// $wrapper._parallax(0.925); // Disabled to allow background image to show
 
 	// Nav Panel.
 
