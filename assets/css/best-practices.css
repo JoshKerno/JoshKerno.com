@@ -97,6 +97,43 @@ textarea.error {
     background: white !important;
     color: black !important;
   }
+
+/* Uniform date spacing across all pages - FORCE OVERRIDE */
+header.major > .date,
+#main > .post header.major > .date,
+#main > .posts > article header > .date {
+  position: relative !important;
+  text-align: center !important;
+  margin: 0 0 4rem 0 !important;
+  min-width: 12rem !important;
+  display: inline-block !important;
+}
+
+header.major > .date:before,
+header.major > .date:after,
+#main > .post header.major > .date:before,
+#main > .post header.major > .date:after,
+#main > .posts > article header > .date:before,
+#main > .posts > article header > .date:after {
+  content: '' !important;
+  display: block !important;
+  position: absolute !important;
+  top: 50% !important;
+  width: calc(50% - 6rem) !important;
+  border-top: solid 2px #eeeeee !important;
+}
+
+header.major > .date:before,
+#main > .post header.major > .date:before,
+#main > .posts > article header > .date:before {
+  left: 0 !important;
+}
+
+header.major > .date:after,
+#main > .post header.major > .date:after,
+#main > .posts > article header > .date:after {
+  right: 0 !important;
+}
   
   a {
     color: black !important;
@@ -161,7 +198,7 @@ textarea.error {
   border: 0;
 }
 
-/* Performance optimizations for images */
+/* Website maintenance optimizations for images */
 img {
   max-width: 100%;
   height: auto;
