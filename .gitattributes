@@ -1,0 +1,38 @@
+# Josh Kerno Portfolio Website
+# Web Development Portfolio & Services Site
+
+# Markdown files
+*.md text eol=lf
+
+# HTML files
+*.html text eol=lf
+
+# CSS files
+*.css text eol=lf
+*.scss text eol=lf
+
+# JavaScript files
+*.js text eol=lf
+
+# Images
+*.jpg binary
+*.jpeg binary
+*.png binary
+*.gif binary
+*.ico binary
+*.svg text eol=lf
+
+# Fonts
+*.woff binary
+*.woff2 binary
+*.ttf binary
+*.eot binary
+
+# Documentation
+*.txt text eol=lf
+*.md text eol=lf
+
+# Project metadata
+.gitattributes text eol=lf
+.gitignore text eol=lf
+README.md text eol=lf
