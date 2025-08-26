@@ -16,7 +16,7 @@
 
 /* Force body background image for production */
 body.is-preload {
-  background-image: url("/images/overlay.png"), linear-gradient(0deg, rgba(0,0,0,0.1), rgba(0,0,0,0.1)), url("/images/bg.jpg") !important;
+  background-image: url("../images/overlay.png"), linear-gradient(0deg, rgba(0,0,0,0.1), rgba(0,0,0,0.1)), url("../images/bg.jpg") !important;
   background-size: auto, auto, cover !important;
   background-position: center, center, center !important;
   background-repeat: repeat, no-repeat, no-repeat !important;
@@ -25,7 +25,7 @@ body.is-preload {
 
 /* Override any conflicting body background rules */
 html body.is-preload {
-  background-image: url("/images/overlay.png"), linear-gradient(0deg, rgba(0,0,0,0.1), rgba(0,0,0,0.1)), url("/images/bg.jpg") !important;
+  background-image: url("../images/overlay.png"), linear-gradient(0deg, rgba(0,0,0,0.1), rgba(0,0,0,0.1)), url("../images/bg.jpg") !important;
   background-size: auto, auto, cover !important;
   background-position: center, center, center !important;
   background-repeat: repeat, no-repeat, no-repeat !important;
